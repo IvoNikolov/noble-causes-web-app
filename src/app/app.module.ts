@@ -8,6 +8,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CausesComponent } from './pages/causes/causes.component';
+import { CreateCauseComponent } from './pages/causes/create-cause/create-cause.component';
+import { CauseDetailsComponent } from './pages/causes/cause-details/cause-details.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { CausesComponent } from './pages/causes/causes.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    CausesComponent
+    CausesComponent,
+    CreateCauseComponent,
+    CauseDetailsComponent
   ],
   imports: [
     BrowserModule,

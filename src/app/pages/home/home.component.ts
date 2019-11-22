@@ -9,6 +9,8 @@ export class HomeComponent implements OnInit {
 
   data;
   val = 'one';
+  test = 'this is the value';
+
   constructor() { }
 
   ngOnInit() {
