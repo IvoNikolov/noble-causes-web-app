@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-create-cause',
@@ -7,9 +7,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateCauseComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('imgd') imgData: ElementRef;
 
-  ngOnInit() {
+  imagePath: any;
+  imgURL: any;
+  message: string;
+
+  constructor() {}
+
+  ngOnInit() {}
+
+  onFileSelected(event) {
+    console.log('ok');
+    console.log(event);
   }
 
+  preview(files) {
+    if (files.length === 0) {return; }
+
+    const mimeType = files[0].type;
+    if (mimeType.match(/image\/*/) == null) {
+      this.message = 'Only images are supported.';
+      return;
+    }
+
+    const reader = new FileReader();
+    this.imagePath = files;
+    reader.readAsDataURL(files[0]);
+    reader.onload = _event => {
+      this.imgURL = reader.result;
+      this.add();
+    };
+
+  }
+
+  add() {
+    console.log(this.imgData);
+  }
 }

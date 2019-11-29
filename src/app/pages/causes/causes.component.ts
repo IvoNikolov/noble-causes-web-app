@@ -8,7 +8,7 @@ import { Cause } from './cause.model';
 })
 export class CausesComponent implements OnInit {
 
-  causes: Cause[] = [new Cause('Ivo', 'Seeking Funds for IT StartUps', 'None', '0')];
+  causes: Cause[] = [new Cause('Ivo', 'Hobby', 'Seeking Funds for IT StartUps', 'None', '0')];
 
   constructor() {
     console.log(this.causes);

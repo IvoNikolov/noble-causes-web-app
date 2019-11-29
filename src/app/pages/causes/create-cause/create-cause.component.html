@@ -12,8 +12,14 @@
           </div>
         </div>
         <div class="row">
+          <div class="col-sm-5 form-group">
+              <input #file type="file" accept='image/*' (change)="preview(file.files)" />
+              <img #imgd [src]="imgURL" height="200" *ngIf="imgURL">
+          </div>
+        </div>
+        <div class="row">
           <div class="col-xs-12">
-            <button class="btn btn-success" type="submit">Add</button>
+            <button class="btn btn-success" type="submit" (click)="add()">Add</button>
             <button class="btn btn-danger" type="button">Delete</button>
             <button class="btn btn-primary" type="button">Clear</button>
           </div>
