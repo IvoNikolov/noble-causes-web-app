@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { CausesComponent } from './pages/causes/causes.component';
 import { CreateCauseComponent } from './pages/causes/create-cause/create-cause.component';
 import { CauseDetailsComponent } from './pages/causes/cause-details/cause-details.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CauseDetailsComponent } from './pages/causes/cause-details/cause-detail
     HomeComponent,
     CausesComponent,
     CreateCauseComponent,
-    CauseDetailsComponent
+    CauseDetailsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
