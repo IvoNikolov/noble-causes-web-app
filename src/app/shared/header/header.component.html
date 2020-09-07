@@ -4,10 +4,10 @@
       <a class="navbar-brand bg-info" href="#">Noble Causes Website</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Causes</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#" class="bg-success">Donate</a></li>
+      <li class="active"><a [routerLink]="['home']">Home</a></li>
+      <li><a [routerLink]="['causes']">Causes</a></li>
+      <li><a [routerLink]="['about']">About</a></li>
+      <li><a [routerLink]="['donation']" class="bg-success">Donate</a></li>
     </ul>
   </div>
 </nav>
